@@ -12,19 +12,18 @@ const getRecipeByInitials = async () => {
 };
 
 const getRecipe = async () => {
+  const recipeName = document.getElementById("search-bar-js").value;
   const p = await fetch(
-    "https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata"
+    `https://www.themealdb.com/api/json/v1/1/search.php?s=${recipeName}`
   );
 
   const result = await p.json();
 
-  const para = document.createElement("p");
-  const node = document.createTextNode(result.meals[0].strMeal);
-  para.appendChild(node);
+  const toBeStored = JSON.stringify(result.meals);
 
-  resultsDiv.appendChild(para);
+  localStorage.setItem("RecipeData", toBeStored);
 
-  localStorage.setItem("RecipeData:", result.meals);
+  window.location.href = "http://127.0.0.1:5500/recipe.html";
   console.log(result.meals[0].strMeal);
 };
 

@@ -4,16 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Tracker</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     Hello this is a recipe tracker
 
     <!-- this section is for getting the recipes -->
-    <section>
-      <!-- take input from the user -->
-      <!-- we will fetch recipes by initials and display them -->
-
-      <button id="getRecipe">Search for recipe</button>
+    <section class="heroSection">
+      <div>
+        <img src="/media/nachos.png" class="recipeIcon" alt="" />
+      </div>
+      <div>
+        <div role="search" class="search">
+          <input
+            tabindex="1"
+            id="search-bar-js"
+            class="searchbar"
+            type="search"
+            aria-label="Search text"
+            placeholder="Search Recipe or Initials..."
+            name="search"
+          />
+          <button
+            tabindex="-1"
+            class="searchbutton"
+            id="close-img-js"
+            aria-label="Cancel"
+          >
+            <img
+              src="media/round_close_black_24dp.jpg"
+              alt="cancel"
+              class="closeimg globalsearchremove"
+              class="searchbutton"
+              id="close-img-js"
+              aria-label="Cancel"
+            />
+          </button>
+          <button
+            tabindex="2"
+            class="searchbutton"
+            id="getRecipe"
+            aria-label="Search"
+          >
+            <img
+              src="media/round_search_black_24dp.jpg"
+              alt="search"
+              class="searchimg"
+            />
+          </button>
+        </div>
+      </div>
     </section>
 
     <script src="index.js"></script>
