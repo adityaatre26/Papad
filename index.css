@@ -7,6 +7,12 @@ a.exception {
   color: white;
 }
 
+body {
+  background-image: url(/media/background.png);
+  background-color: rgba(255, 255, 255, 0.65);
+  background-blend-mode: lighten;
+}
+
 div {
   display: flex;
   justify-content: center;
@@ -37,7 +43,7 @@ div.middle {
 /* XXX Small screens (320px and up) */
 @media only screen and (min-width: 320px) {
   .recipeIcon {
-    max-width: 400px;
+    max-width: 650px;
     width: 90%;
   }
   .searchsection {
@@ -60,13 +66,13 @@ div.middle {
 
   .searchbar {
     font-size: 10px;
-    padding: 10px;
-    width: 550px;
+    padding: 20px;
+    width: 750px;
     margin-left: 10px;
     margin-top: 6px;
     margin-bottom: 6px;
     outline: none;
-    border-radius: 20px;
+    border-radius: 40px;
     border: 1.5px solid black;
     font-family: "Roboto", sans-serif;
     cursor: pointer;
